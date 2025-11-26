@@ -24,51 +24,51 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
   const materiales = [
     {
       id: 1,
-      nombre: 'Panel Cempanel Estructural',
+      nombre: 'Panel EcoPanel Estructural',
       categoria: 'paneles',
-      proveedor: 'Cempanel',
-      especificaciones: '1.20m × 2.40m × 8mm',
+      proveedor: 'EcoPanel',
+      especificaciones: '1.22m × 2.44m × 9mm',
       disponibilidad: 'Disponible',
       certificaciones: ['NOM-008', 'ISO 9001'],
       aplicaciones: ['Muros interiores', 'Divisiones', 'Revestimientos'],
       sustentabilidad: 'Bajo contenido de carbono, reciclable',
-      color: 'from-teal-500 to-teal-600'
+      color: 'from-slate-400 to-slate-500'
     },
     {
       id: 2,
-      nombre: 'Lámina Mexalit Fibrocemento',
+      nombre: 'Lámina TechBuild Compuesta',
       categoria: 'cubiertas',
-      proveedor: 'Mexalit',
-      especificaciones: '0.90m × 2.44m × 6mm',
+      proveedor: 'TechBuild',
+      especificaciones: '0.92m × 2.50m × 7mm',
       disponibilidad: 'Disponible',
       certificaciones: ['NOM-189', 'Certificación Ambiental'],
       aplicaciones: ['Cubiertas', 'Techados', 'Fachadas ventiladas'],
       sustentabilidad: 'Materiales reciclados, larga vida útil',
-      color: 'from-orange-500 to-orange-600'
+      color: 'from-slate-400 to-slate-500'
     },
     {
       id: 3,
       nombre: 'Panel Arquitectónico Ligero',
       categoria: 'fachadas',
-      proveedor: 'Cempanel',
-      especificaciones: '1.20m × 3.00m × 10mm',
+      proveedor: 'EcoPanel',
+      especificaciones: '1.25m × 3.05m × 11mm',
       disponibilidad: 'Bajo pedido',
       certificaciones: ['NOM-008', 'LEED Compatible'],
       aplicaciones: ['Fachadas', 'Revestimientos exteriores'],
       sustentabilidad: 'Reducción de peso estructural, eficiencia térmica',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-slate-500 to-slate-600'
     },
     {
       id: 4,
-      nombre: 'Sistema de Cubierta Mexalit Pro',
+      nombre: 'Sistema de Cubierta TechBuild Pro',
       categoria: 'cubiertas',
-      proveedor: 'Mexalit',
-      especificaciones: '1.05m × 2.50m × 8mm',
+      proveedor: 'TechBuild',
+      especificaciones: '1.08m × 2.55m × 8mm',
       disponibilidad: 'Disponible',
       certificaciones: ['NOM-189', 'Certificación Sísmica'],
       aplicaciones: ['Cubiertas industriales', 'Comerciales', 'Residenciales'],
       sustentabilidad: 'Resistencia UV, baja huella de carbono',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-slate-500 to-slate-600'
     },
     {
       id: 5,
@@ -80,19 +80,19 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
       certificaciones: ['Ingeniería DEMS', 'Certificación Estructural'],
       aplicaciones: ['Vivienda', 'Oficinas', 'Comercio'],
       sustentabilidad: 'Reutilizable, desmontable, modular',
-      color: 'from-indigo-500 to-indigo-600'
+      color: 'from-blue-400 to-blue-500'
     },
     {
       id: 6,
       nombre: 'Panel de Fachada Ventilada',
       categoria: 'fachadas',
-      proveedor: 'Mexalit',
-      especificaciones: '1.20m × 2.40m × 12mm',
+      proveedor: 'TechBuild',
+      especificaciones: '1.22m × 2.45m × 13mm',
       disponibilidad: 'Disponible',
       certificaciones: ['NOM-008', 'Certificación Térmica'],
       aplicaciones: ['Fachadas ventiladas', 'Sistemas de aislamiento'],
       sustentabilidad: 'Eficiencia energética, reciclable',
-      color: 'from-green-500 to-green-600'
+      color: 'from-slate-400 to-slate-500'
     }
   ];
 
@@ -130,10 +130,10 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
                 <Database className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </div>
               <div className="space-y-2">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-800">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-800">
                   Banco de Materiales <StyledText variant="default" className="inline" />
                 </h1>
-                <p className="text-sm sm:text-base lg:text-lg text-slate-600">
+                <p className="text-sm md:text-base text-slate-600">
                   Catálogo de materiales modulares y sistemas constructivos
                 </p>
               </div>
@@ -148,7 +148,7 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
             >
               <div className="flex items-start gap-3">
                 <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <p className="text-sm text-slate-700 leading-relaxed">
+                <p className="text-xs md:text-sm text-slate-700 leading-relaxed">
                   Este banco de materiales presenta el catálogo de componentes disponibles para 
                   proyectos de arquitectura modular. Incluye paneles estructurales, sistemas de 
                   cubierta y elementos prefabricados de nuestro ecosistema de proveedores.
@@ -171,9 +171,9 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
                   transition={{ delay: 0.3 + index * 0.05 }}
                   className="bg-white/70 backdrop-blur-xl border border-slate-200/50 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300"
                 >
-                  <stat.icon className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-slate-800">{stat.value}</div>
-                  <div className="text-xs text-slate-600 mt-1">{stat.label}</div>
+                  <stat.icon className="w-6 h-6 text-slate-600 mx-auto mb-2" />
+                  <div className="text-2xl md:text-3xl font-bold text-slate-800">{stat.value}</div>
+                  <div className="text-xs md:text-sm text-slate-600 mt-1">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -201,8 +201,8 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
                       onClick={() => setSelectedCategory(cat.id)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                         selectedCategory === cat.id
-                          ? 'bg-blue-500 text-white shadow-md'
-                          : 'bg-white text-slate-700 border border-slate-200 hover:border-blue-300'
+                          ? 'bg-slate-700 text-white shadow-md'
+                          : 'bg-white text-slate-700 border border-slate-200 hover:border-slate-400'
                       }`}
                     >
                       {cat.name}
@@ -237,25 +237,25 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
                   </div>
 
                   {/* Título y proveedor */}
-                  <h3 className="text-lg font-bold text-slate-800 mb-2">
+                  <h3 className="text-sm md:text-base font-bold text-slate-800 mb-2">
                     {material.nombre}
                   </h3>
-                  <p className="text-sm text-blue-600 font-medium mb-4">
+                  <p className="text-xs md:text-sm text-slate-600 font-medium mb-4">
                     {material.proveedor}
                   </p>
 
                   {/* Especificaciones */}
                   <div className="space-y-3 mb-4">
                     <div>
-                      <p className="text-xs font-semibold text-slate-500 mb-1">Especificaciones</p>
-                      <p className="text-sm text-slate-700">{material.especificaciones}</p>
+                      <p className="text-xs md:text-sm font-semibold text-slate-500 mb-1">Especificaciones</p>
+                      <p className="text-xs md:text-sm text-slate-700">{material.especificaciones}</p>
                     </div>
 
                     <div>
-                      <p className="text-xs font-semibold text-slate-500 mb-1">Aplicaciones</p>
-                      <div className="flex flex-wrap gap-1">
+                      <p className="text-xs md:text-sm font-semibold text-slate-500 mb-1">Aplicaciones</p>
+                      <div className="flex flex-wrap gap-1.5">
                         {material.aplicaciones.map((app, i) => (
-                          <span key={i} className="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full">
+                          <span key={i} className="text-xs md:text-sm bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full">
                             {app}
                           </span>
                         ))}
@@ -263,10 +263,10 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
                     </div>
 
                     <div>
-                      <p className="text-xs font-semibold text-slate-500 mb-1">Certificaciones</p>
-                      <div className="flex flex-wrap gap-1">
+                      <p className="text-xs md:text-sm font-semibold text-slate-500 mb-1">Certificaciones</p>
+                      <div className="flex flex-wrap gap-1.5">
                         {material.certificaciones.map((cert, i) => (
-                          <span key={i} className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
+                          <span key={i} className="text-xs md:text-sm bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
                             {cert}
                           </span>
                         ))}
@@ -276,8 +276,8 @@ const Materiales = ({ hideNavbar = false }: MaterialesProps) => {
 
                   {/* Sustentabilidad */}
                   <div className="pt-4 border-t border-slate-200">
-                    <p className="text-xs font-semibold text-slate-500 mb-1">Sustentabilidad</p>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs md:text-sm font-semibold text-slate-500 mb-1">Sustentabilidad</p>
+                    <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                       {material.sustentabilidad}
                     </p>
                   </div>

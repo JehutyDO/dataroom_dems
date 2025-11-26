@@ -11,11 +11,11 @@ import Navbar from "@/components/Navbar";
 const etapasData = [
   {
     id: 1,
-    etapa: "Origen: Fabricación Mexalit",
+    etapa: "Origen: Fabricación TechBuild",
     icon: Factory,
     color: "from-purple-500 to-purple-600",
     tiempo: { min: 14, max: 28 }, // días
-    actores: ["Mexalit (Fabricante)", "Proveedores de Aluminio Reciclado", "Proveedores de Polietileno"],
+    actores: ["TechBuild (Fabricante)", "Proveedores de Aluminio Reciclado", "Proveedores de Polietileno"],
     procesos: [
       "Recepción de aluminio reciclado post-consumo",
       "Extrusión de núcleo de polietileno",
@@ -24,12 +24,12 @@ const etapasData = [
       "Almacenamiento en planta"
     ],
     impacto: {
-      materialReciclado: 75, // % de contenido reciclado
-      co2VsTradicional: -60, // % reducción vs aluminio virgen
-      residuosGenerados: 2, // % del total
+      materialReciclado: 72, // % de contenido reciclado
+      co2VsTradicional: -58, // % reducción vs aluminio virgen
+      residuosGenerados: 2.5, // % del total
     },
-    costoPorM2: { min: 180, max: 250 }, // MXN
-    capacidadProduccion: 15000, // m2/mes
+    costoPorM2: { min: 195, max: 265 }, // MXN
+    capacidadProduccion: 14500, // m2/mes
   },
   {
     id: 2,
@@ -46,12 +46,12 @@ const etapasData = [
       "Trazabilidad mediante códigos QR"
     ],
     impacto: {
-      emisionesOptimizadas: 35, // % vs logística tradicional
-      entregas: 98, // % entregas a tiempo
-      mermaTransporte: 0.5, // %
+      emisionesOptimizadas: 32, // % vs logística tradicional
+      entregas: 96, // % entregas a tiempo
+      mermaTransporte: 0.7, // %
     },
-    costoPorM2: { min: 25, max: 45 },
-    capacidadLogistica: 50000, // m2/mes
+    costoPorM2: { min: 28, max: 48 },
+    capacidadLogistica: 48000, // m2/mes
   },
   {
     id: 3,
@@ -63,17 +63,17 @@ const etapasData = [
     procesos: [
       "Pre-ensamblaje de módulos en taller",
       "Instalación de estructura modular",
-      "Montaje de paneles Mexalit",
+      "Montaje de paneles TechBuild",
       "Sistemas MEP integrados",
       "Inspecciones y pruebas de desempeño"
     ],
     impacto: {
-      tiempoVsTradicional: -40, // % reducción
-      desperdicioObra: 15, // % vs 30% tradicional
-      trabajadores: 60, // % vs obra tradicional
+      tiempoVsTradicional: -38, // % reducción
+      desperdicioObra: 17, // % vs 30% tradicional
+      trabajadores: 62, // % vs obra tradicional
     },
-    costoPorM2: { min: 650, max: 1200 },
-    proyectosConcurrentes: 8,
+    costoPorM2: { min: 680, max: 1250 },
+    proyectosConcurrentes: 7,
   },
   {
     id: 4,
@@ -258,10 +258,10 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                 <Workflow className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </div>
               <div className="space-y-2">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-800">
-                  Cadena de Valor Circular <StyledText className="inline" />-Mexalit
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-800">
+                  Cadena de Valor Circular <StyledText className="inline" />
                 </h1>
-                <p className="text-sm sm:text-base lg:text-lg text-slate-600">
+                <p className="text-sm md:text-base text-slate-600">
                   Ecosistema integrado de fabricación, construcción y recuperación de materiales
                 </p>
               </div>
@@ -279,8 +279,8 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   <Info className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1 space-y-4">
-                  <h3 className="text-xl font-bold text-slate-800">¿Qué es una Cadena de Valor Circular?</h3>
-                  <p className="text-sm text-slate-700 leading-relaxed">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800">¿Qué es una Cadena de Valor Circular?</h3>
+                  <p className="text-xs md:text-sm text-slate-700 leading-relaxed">
                     Es un modelo económico donde los materiales <strong>nunca se desperdician</strong>, sino que 
                     circulan continuamente a través de diferentes usos. A diferencia del modelo tradicional 
                     (extraer → fabricar → usar → tirar), el modelo circular crea un <strong>ciclo cerrado</strong> 
@@ -299,7 +299,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                     </div>
                     <h4 className="font-bold text-slate-800">Modelo Lineal (Tradicional)</h4>
                   </div>
-                  <div className="space-y-3 text-sm text-slate-600">
+                  <div className="space-y-3 text-xs md:text-sm text-slate-600">
                     <div className="flex items-center gap-2">
                       <span className="text-red-500">1️⃣</span>
                       <span>Extraer materias primas vírgenes</span>
@@ -321,25 +321,25 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                       <span>Repetir desde cero con material virgen</span>
                     </div>
                     <div className="mt-4 pt-4 border-t border-red-200">
-                      <p className="text-xs text-red-600 font-semibold">
+                      <p className="text-xs md:text-sm text-red-600 font-semibold">
                         ❌ Alto desperdicio | ❌ Alta contaminación | ❌ Costos repetidos
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Modelo Circular (DEMS-Mexalit) */}
+                {/* Modelo Circular (DEMS) */}
                 <div className="bg-white/80 rounded-lg p-5 border-2 border-green-300">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-8 h-8 rounded-lg bg-green-500 flex items-center justify-center">
                       <span className="text-white text-lg">♻️</span>
                     </div>
-                    <h4 className="font-bold text-slate-800">Modelo Circular (<StyledText className="inline" />-Mexalit)</h4>
+                    <h4 className="font-bold text-slate-800">Modelo Circular (<StyledText className="inline" />)</h4>
                   </div>
-                  <div className="space-y-3 text-sm text-slate-600">
+                  <div className="space-y-3 text-xs md:text-sm text-slate-600">
                     <div className="flex items-center gap-2">
                       <span className="text-green-500">1️⃣</span>
-                      <span><strong>Mexalit</strong> fabrica paneles con 75% aluminio reciclado</span>
+                      <span><strong>TechBuild</strong> fabrica paneles con 72% aluminio reciclado</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-green-500">2️⃣</span>
@@ -362,7 +362,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                       <span className="font-semibold text-green-700">Los materiales vuelven a construir otro edificio</span>
                     </div>
                     <div className="mt-4 pt-4 border-t border-green-200">
-                      <p className="text-xs text-green-600 font-semibold">
+                      <p className="text-xs md:text-sm text-green-600 font-semibold">
                         ✅ Cero desperdicio | ✅ Menos CO₂ | ✅ Ahorro en cada ciclo
                       </p>
                     </div>
@@ -376,15 +376,15 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   <span className="text-2xl">🎯</span>
                   ¿Por qué es Importante?
                 </h4>
-                <div className="grid sm:grid-cols-3 gap-4 text-sm">
+                <div className="grid sm:grid-cols-3 gap-4 text-xs md:text-sm">
                   <div className="space-y-2">
                     <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
                       <DollarSign className="w-5 h-5 text-green-600" />
                     </div>
                     <p className="font-semibold text-slate-800">Ahorro Económico</p>
-                    <p className="text-xs text-slate-600">
+                    <p className="text-xs md:text-sm text-slate-600">
                       Cada vez que reutilizas materiales, ahorras el costo de producir nuevos. 
-                      Un panel de Mexalit puede usarse <strong>3-5 veces</strong>, multiplicando su valor.
+                      Un panel de TechBuild puede usarse <strong>3-5 veces</strong>, multiplicando su valor.
                     </p>
                   </div>
                   <div className="space-y-2">
@@ -392,7 +392,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                       <Leaf className="w-5 h-5 text-teal-600" />
                     </div>
                     <p className="font-semibold text-slate-800">Impacto Ambiental</p>
-                    <p className="text-xs text-slate-600">
+                    <p className="text-xs md:text-sm text-slate-600">
                       La construcción genera <strong>40% de residuos globales</strong>. Con este modelo, 
                       evitas demoliciones contaminantes y reduces emisiones de CO₂ hasta 60%.
                     </p>
@@ -402,7 +402,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                       <Clock className="w-5 h-5 text-blue-600" />
                     </div>
                     <p className="font-semibold text-slate-800">Velocidad</p>
-                    <p className="text-xs text-slate-600">
+                    <p className="text-xs md:text-sm text-slate-600">
                       Como los materiales están diseñados para <strong>desmontarse fácilmente</strong>, 
                       puedes recuperar un edificio en días (vs meses de demolición tradicional).
                     </p>
@@ -416,11 +416,11 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   <span className="text-2xl">🔬</span>
                   ¿Qué Hace Este Simulador?
                 </h4>
-                <p className="text-sm text-slate-700 leading-relaxed mb-4">
+                <p className="text-xs md:text-sm text-slate-700 leading-relaxed mb-4">
                   Te permite <strong>experimentar con diferentes escalas de proyecto</strong> (desde 500 hasta 20,000 m²) 
                   y ver cómo cambian los números cuando los materiales circulan <strong>1, 2, 3, 4 o 5 veces</strong>.
                 </p>
-                <div className="space-y-2 text-sm text-slate-700">
+                <div className="space-y-2 text-xs md:text-sm text-slate-700">
                   <div className="flex items-start gap-2">
                     <span className="text-indigo-600 font-bold">•</span>
                     <p><strong>Mueves los sliders</strong> y los cálculos se actualizan en tiempo real</p>
@@ -435,7 +435,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="text-indigo-600 font-bold">•</span>
-                    <p><strong>Entiendes el flujo completo</strong>: desde Mexalit → DEMS → Usuario → Recuperación → Banco de Materiales → vuelve a empezar</p>
+                    <p><strong>Entiendes el flujo completo</strong>: desde TechBuild → DEMS → Usuario → Recuperación → Banco de Materiales → vuelve a empezar</p>
                   </div>
                 </div>
               </div>
@@ -449,8 +449,8 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
               transition={{ duration: 0.7, delay: 0.3 }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <h2 className="text-xl font-semibold text-slate-800">Parámetros de Simulación</h2>
-                <div className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">
+                <h2 className="text-xl md:text-2xl font-semibold text-slate-800">Parámetros de Simulación</h2>
+                <div className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs md:text-sm font-semibold">
                   Ajusta y ve los resultados en tiempo real ⚡
                 </div>
               </div>
@@ -458,10 +458,10 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <label className="text-base font-medium text-slate-700 block mb-1">
+                    <label className="text-sm md:text-base font-medium text-slate-700 block mb-1">
                       Escala del Proyecto: <span className="text-indigo-600 font-bold">{escalaProyecto[0].toLocaleString()} m²</span>
                     </label>
-                    <p className="text-xs text-slate-500">Superficie total a construir con el sistema modular</p>
+                    <p className="text-xs md:text-sm text-slate-500">Superficie total a construir con el sistema modular</p>
                   </div>
                 </div>
                 <Slider 
@@ -472,7 +472,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   step={500}
                   className="cursor-pointer"
                 />
-                <div className="flex justify-between text-xs text-slate-400">
+                <div className="flex justify-between text-xs md:text-sm text-slate-400">
                   <span>500 m²</span>
                   <span>20,000 m²</span>
                 </div>
@@ -481,10 +481,10 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <label className="text-base font-medium text-slate-700 block mb-1">
+                    <label className="text-sm md:text-base font-medium text-slate-700 block mb-1">
                       Ciclos de Vida Simulados: <span className="text-indigo-600 font-bold">{vidasUtilSimuladas[0]}</span>
                     </label>
-                    <p className="text-xs text-slate-500">Número de veces que el material circula (construcción → uso → recuperación → reuso)</p>
+                    <p className="text-xs md:text-sm text-slate-500">Número de veces que el material circula (construcción → uso → recuperación → reuso)</p>
                   </div>
                 </div>
                 <Slider 
@@ -495,7 +495,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   step={1}
                   className="cursor-pointer"
                 />
-                <div className="flex justify-between text-xs text-slate-400">
+                <div className="flex justify-between text-xs md:text-sm text-slate-400">
                   <span>1 ciclo (lineal)</span>
                   <span>5 ciclos (máximo circular)</span>
                 </div>
@@ -516,11 +516,11 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm font-medium text-slate-600">Ahorro vs Lineal</p>
-                  <p className="text-2xl font-bold text-slate-800">
+                  <p className="text-xs md:text-sm font-medium text-slate-600">Ahorro vs Lineal</p>
+                  <p className="text-2xl md:text-3xl font-bold text-slate-800">
                     ${Math.round(metricas.costos.ahorro).toLocaleString('es-MX')}
                   </p>
-                  <p className="text-xs text-slate-500">Por recuperación y reuso de materiales</p>
+                  <p className="text-xs md:text-sm text-slate-500">Por recuperación y reuso de materiales</p>
                 </div>
               </motion.div>
 
@@ -536,9 +536,9 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm font-medium text-slate-600">Tiempo por Ciclo</p>
-                  <p className="text-2xl font-bold text-slate-800">{metricas.tiempos.totalPorCiclo} días</p>
-                  <p className="text-xs text-slate-500">Fabricación + construcción + desmontaje</p>
+                  <p className="text-xs md:text-sm font-medium text-slate-600">Tiempo por Ciclo</p>
+                  <p className="text-2xl md:text-3xl font-bold text-slate-800">{metricas.tiempos.totalPorCiclo} días</p>
+                  <p className="text-xs md:text-sm text-slate-500">Fabricación + construcción + desmontaje</p>
                 </div>
               </motion.div>
 
@@ -554,9 +554,9 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm font-medium text-slate-600">Reducción CO₂</p>
-                  <p className="text-2xl font-bold text-slate-800">{metricas.ambiental.reduccion.toFixed(1)}%</p>
-                  <p className="text-xs text-slate-500">vs construcción tradicional lineal</p>
+                  <p className="text-xs md:text-sm font-medium text-slate-600">Reducción CO₂</p>
+                  <p className="text-2xl md:text-3xl font-bold text-slate-800">{metricas.ambiental.reduccion.toFixed(1)}%</p>
+                  <p className="text-xs md:text-sm text-slate-500">vs construcción tradicional lineal</p>
                 </div>
               </motion.div>
 
@@ -572,9 +572,9 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm font-medium text-slate-600">Circularidad</p>
-                  <p className="text-2xl font-bold text-slate-800">{metricas.circular.tasaCircularidad.toFixed(1)}%</p>
-                  <p className="text-xs text-slate-500">Material reusado vs total usado</p>
+                  <p className="text-xs md:text-sm font-medium text-slate-600">Circularidad</p>
+                  <p className="text-2xl md:text-3xl font-bold text-slate-800">{metricas.circular.tasaCircularidad.toFixed(1)}%</p>
+                  <p className="text-xs md:text-sm text-slate-500">Material reusado vs total usado</p>
                 </div>
               </motion.div>
             </div>
@@ -586,7 +586,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.8 }}
             >
-              <h2 className="text-2xl font-semibold text-slate-800">Etapas del Ecosistema</h2>
+              <h2 className="text-xl md:text-2xl font-semibold text-slate-800">Etapas del Ecosistema</h2>
               
               {etapasData.map((etapa, index) => {
                 const Icon = etapa.icon;
@@ -625,7 +625,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-semibold text-slate-800 mb-1">
+                        <h3 className="text-sm md:text-base font-semibold text-slate-800 mb-1">
                           {etapa.etapa.includes("dems") || etapa.etapa.includes("DEMS") ? (
                             <>
                               {etapa.etapa.split("DEMS")[0]}
@@ -636,7 +636,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                             etapa.etapa
                           )}
                         </h3>
-                        <div className="flex flex-wrap gap-3 text-xs text-slate-600">
+                        <div className="flex flex-wrap gap-3 text-xs md:text-sm text-slate-600">
                           <span className="flex items-center gap-1">
                             <Clock className="w-3 h-3" />
                             {tiempoEtapa}
@@ -666,10 +666,10 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                           <div className="p-6 space-y-6">
                             {/* Actores */}
                             <div>
-                              <h4 className="text-sm font-semibold text-slate-700 mb-3">Actores Involucrados</h4>
+                              <h4 className="text-xs md:text-sm font-semibold text-slate-700 mb-3">Actores Involucrados</h4>
                               <div className="flex flex-wrap gap-2">
                                 {etapa.actores.map((actor, i) => (
-                                  <span key={i} className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">
+                                  <span key={i} className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs md:text-sm font-medium">
                                     {actor.includes("DEMS") ? (
                                       <>
                                         {actor.split("DEMS")[0]}
@@ -686,10 +686,10 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
 
                             {/* Procesos */}
                             <div>
-                              <h4 className="text-sm font-semibold text-slate-700 mb-3">Procesos Clave</h4>
+                              <h4 className="text-xs md:text-sm font-semibold text-slate-700 mb-3">Procesos Clave</h4>
                               <ul className="space-y-2">
                                 {etapa.procesos.map((proceso, i) => (
-                                  <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
+                                  <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-slate-600">
                                     <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 flex-shrink-0"></span>
                                     {proceso.includes("DEMS") ? (
                                       <>
@@ -707,14 +707,14 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
 
                             {/* Impacto */}
                             <div>
-                              <h4 className="text-sm font-semibold text-slate-700 mb-3">Indicadores de Impacto</h4>
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              <h4 className="text-xs md:text-sm font-semibold text-slate-700 mb-3">Indicadores de Impacto</h4>
+                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                                 {Object.entries(etapa.impacto).map(([key, value], i) => (
-                                  <div key={i} className="p-3 bg-slate-50 rounded-lg">
-                                    <p className="text-xs text-slate-500 mb-1 capitalize">
+                                  <div key={i} className="bg-slate-50/70 rounded-lg p-3">
+                                    <p className="text-xs md:text-sm text-slate-500 mb-1 capitalize">
                                       {key.replace(/([A-Z])/g, ' $1').trim()}
                                     </p>
-                                    <p className="text-lg font-bold text-slate-800">
+                                    <p className="text-sm md:text-base font-bold text-slate-800">
                                       {typeof value === 'number' ? (
                                         value >= 1000 ? value.toLocaleString() : value
                                       ) : value}
@@ -741,15 +741,15 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
               transition={{ duration: 0.7, delay: 1.4 }}
             >
               <div>
-                <h2 className="text-2xl font-bold mb-2">Valor Generado por el Ecosistema Circular</h2>
-                <p className="text-indigo-100 text-sm">
+                <h2 className="text-xl md:text-2xl font-bold mb-2">Valor Generado por el Ecosistema Circular</h2>
+                <p className="text-indigo-100 text-xs md:text-sm">
                   Resumen del impacto económico y ambiental con los parámetros seleccionados
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2 bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                  <p className="text-indigo-100 text-sm font-medium">Material en Circulación</p>
+                  <p className="text-indigo-100 text-xs md:text-sm font-medium">Material en Circulación</p>
                   <p className="text-3xl font-bold">{metricas.circular.materialReusado.toLocaleString()} m²</p>
                   <p className="text-xs text-indigo-100">Recuperado y reintegrado al ciclo</p>
                   <div className="mt-3 pt-3 border-t border-white/20">
@@ -765,7 +765,7 @@ const Cadena = ({ hideNavbar = false }: CadenaProps) => {
                   <p className="text-xs text-indigo-100">En materiales que evitan producción nueva</p>
                   <div className="mt-3 pt-3 border-t border-white/20">
                     <p className="text-xs text-white/90">
-                      💡 <strong>Ejemplo:</strong> Si tuvieras que comprar paneles nuevos de Mexalit cada vez, gastarías esto. Al reusar, ese dinero se ahorra.
+                      💡 <strong>Ejemplo:</strong> Si tuvieras que comprar paneles nuevos de TechBuild cada vez, gastarías esto. Al reusar, ese dinero se ahorra.
                     </p>
                   </div>
                 </div>

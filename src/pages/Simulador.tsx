@@ -72,10 +72,10 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
                 <Building className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </div>
               <div className="space-y-2">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-800">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-800">
                   Simulador de Reconversión Modular
                 </h1>
-                <p className="text-sm sm:text-base lg:text-lg text-slate-600">
+                <p className="text-sm md:text-base text-slate-600">
                   Estima el impacto técnico, económico y ambiental de tu proyecto
                 </p>
               </div>
@@ -92,9 +92,8 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
                 <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-slate-700 leading-relaxed">
                   Este simulador permite estimar el impacto técnico, económico y ambiental de una 
-                  reconversión modular usando sistemas híbridos, materiales ligeros y elementos de 
-                  Mexalit y Cempanel. Los valores son aproximados y sirven únicamente como 
-                  referencia preliminar.
+                  reconversión modular usando sistemas híbridos, materiales ligeros y elementos sostenibles. 
+                  Los valores son aproximados y sirven únicamente como referencia preliminar.
                 </p>
               </div>
             </motion.div>
@@ -183,16 +182,16 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.7 }}
             >
-              <h2 className="text-xl font-semibold text-slate-800 mb-6">Parámetros del Proyecto</h2>
+              <h2 className="text-xl md:text-2xl font-semibold text-slate-800 mb-6">Parámetros del Proyecto</h2>
 
               {/* Superficie */}
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <label className="text-base font-medium text-slate-700 block mb-1">
+                    <label className="text-sm md:text-base font-medium text-slate-700 block mb-1">
                       Superficie a Intervenir: <span className="text-blue-600 font-bold">{m2[0].toLocaleString()} m²</span>
                     </label>
-                    <p className="text-xs text-slate-500">Área total donde se realizará la reconversión modular</p>
+                    <p className="text-xs md:text-sm text-slate-500">Área total donde se realizará la reconversión modular</p>
                   </div>
                 </div>
                 <Slider 
@@ -213,10 +212,10 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <label className="text-base font-medium text-slate-700 block mb-1">
+                    <label className="text-sm md:text-base font-medium text-slate-700 block mb-1">
                       Tipo de Reconversión: <span className="text-blue-600 font-bold">{tiposReconversion[tipoReconversion[0] - 1].label}</span>
                     </label>
-                    <p className="text-xs text-slate-500">{tiposReconversion[tipoReconversion[0] - 1].descripcion}</p>
+                    <p className="text-xs md:text-sm text-slate-500">{tiposReconversion[tipoReconversion[0] - 1].descripcion}</p>
                   </div>
                 </div>
                 <Slider 
@@ -240,11 +239,11 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <label className="text-base font-medium text-slate-700 block mb-1">
+                    <label className="text-sm md:text-base font-medium text-slate-700 block mb-1">
                       Reutilización de Materiales: <span className="text-blue-600 font-bold">{recuperacion[0]}%</span>
                     </label>
-                    <p className="text-xs text-slate-500">
-                      Porcentaje de materiales extraídos que pueden reintegrarse mediante economía circular (Mexalit/Cempanel)
+                    <p className="text-xs md:text-sm text-slate-500">
+                      Porcentaje de materiales extraídos que pueden reintegrarse mediante economía circular
                     </p>
                   </div>
                 </div>
@@ -264,7 +263,7 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
 
               {/* Velocidad del Proyecto */}
               <div className="space-y-4">
-                <label className="text-base font-medium text-slate-700 block mb-3">
+                <label className="text-sm md:text-base font-medium text-slate-700 block mb-3">
                   Velocidad del Proyecto
                 </label>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -276,8 +275,8 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
                         : 'border-slate-200 bg-white hover:border-blue-300'
                     }`}
                   >
-                    <p className="font-semibold text-slate-800 mb-1">Estándar</p>
-                    <p className="text-xs text-slate-600">Tiempos normales de fabricación y montaje</p>
+                    <p className="text-sm md:text-base font-semibold text-slate-800 mb-1">Estándar</p>
+                    <p className="text-xs md:text-sm text-slate-600">Tiempos normales de fabricación y montaje</p>
                   </button>
                   
                   <button
@@ -288,8 +287,8 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
                         : 'border-slate-200 bg-white hover:border-blue-300'
                     }`}
                   >
-                    <p className="font-semibold text-slate-800 mb-1">Acelerado</p>
-                    <p className="text-xs text-slate-600">20% más rápido con optimización</p>
+                    <p className="text-sm md:text-base font-semibold text-slate-800 mb-1">Acelerado</p>
+                    <p className="text-xs md:text-sm text-slate-600">20% más rápido con optimización</p>
                   </button>
                   
                   <button
@@ -300,8 +299,8 @@ const Simulador = ({ hideNavbar = false }: SimuladorProps) => {
                         : 'border-slate-200 bg-white hover:border-blue-300'
                     }`}
                   >
-                    <p className="font-semibold text-slate-800 mb-1">Por Fases</p>
-                    <p className="text-xs text-slate-600">Dividido en bloques de 2,000 m²</p>
+                    <p className="text-sm md:text-base font-semibold text-slate-800 mb-1">Por Fases</p>
+                    <p className="text-xs md:text-sm text-slate-600">Dividido en bloques de 2,000 m²</p>
                   </button>
                 </div>
               </div>

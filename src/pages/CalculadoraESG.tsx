@@ -25,10 +25,10 @@ const tiposProyecto = [
 ];
 
 const materiales = [
-  { value: "mexalit", label: "Mexalit", circularidad: 95 },
-  { value: "cempanel", label: "Cempanel", circularidad: 88 },
-  { value: "acero", label: "Acero ligero", circularidad: 75 },
-  { value: "mixto", label: "Mixto", circularidad: 90 },
+  { value: "techbuild", label: "TechBuild", circularidad: 92 },
+  { value: "ecopanel", label: "EcoPanel", circularidad: 85 },
+  { value: "acero", label: "Acero ligero", circularidad: 73 },
+  { value: "mixto", label: "Mixto", circularidad: 87 },
 ];
 
 interface CalculadoraESGProps {
@@ -95,10 +95,10 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                 <Gauge className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </div>
               <div className="space-y-1">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">
                   Simulador ESG / CO₂
                 </h1>
-                <p className="text-base sm:text-lg text-slate-600">
+                <p className="text-sm md:text-base text-slate-600">
                   Demo Técnica — Métricas Ambientales y Circularidad
                 </p>
               </div>
@@ -112,14 +112,14 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-blue-50 to-green-50 border border-blue-200/50 rounded-2xl p-6 sm:p-8 shadow-lg"
               >
-                <h2 className="text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-4 flex items-center gap-2">
                   <Sparkles className="w-6 h-6 text-blue-500" />
                   ¿Qué hace este simulador?
                 </h2>
-                <p className="text-slate-700 text-base leading-relaxed mb-6">
+                <p className="text-slate-700 text-sm md:text-base leading-relaxed mb-6">
                   Esta calculadora te permite estimar el <strong>impacto ambiental positivo</strong> y el 
                   <strong> ahorro económico</strong> al usar sistemas de construcción ligera y modular como 
-                  <strong> Mexalit</strong> o <strong>Cempanel</strong>, comparado con métodos tradicionales.
+                  <strong> TechBuild</strong> o <strong>EcoPanel</strong>, comparado con métodos tradicionales.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -128,8 +128,8 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
                       <span className="text-2xl">📐</span>
                     </div>
-                    <h3 className="font-semibold text-slate-800 mb-2">Metros Cuadrados</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <h3 className="text-sm md:text-base font-semibold text-slate-800 mb-2">Metros Cuadrados</h3>
+                    <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                       El tamaño del proyecto impacta directamente en las emisiones y costos. 
                       A mayor superficie, mayor potencial de ahorro y reducción de CO₂.
                     </p>
@@ -140,8 +140,8 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
                       <span className="text-2xl">🏢</span>
                     </div>
-                    <h3 className="font-semibold text-slate-800 mb-2">Tipo de Proyecto</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <h3 className="text-sm md:text-base font-semibold text-slate-800 mb-2">Tipo de Proyecto</h3>
+                    <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                       Cada sector tiene necesidades distintas. Hospitales e industrias tienen factores 
                       más altos por su complejidad; residencial, factores menores.
                     </p>
@@ -152,46 +152,46 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                     <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-3">
                       <span className="text-2xl">♻️</span>
                     </div>
-                    <h3 className="font-semibold text-slate-800 mb-2">Material Principal</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <h3 className="text-sm md:text-base font-semibold text-slate-800 mb-2">Material Principal</h3>
+                    <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                       La circularidad mide qué porcentaje del material es reutilizable. 
-                      Mexalit alcanza 95%, reduciendo drásticamente residuos.
+                      TechBuild alcanza 92%, reduciendo drásticamente residuos.
                     </p>
                   </div>
                 </div>
 
                 {/* Ejemplo predefinido */}
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border-2 border-blue-300/50">
-                  <h3 className="font-semibold text-slate-800 mb-3 flex items-center gap-2">
+                  <h3 className="text-sm md:text-base font-semibold text-slate-800 mb-3 flex items-center gap-2">
                     <span className="text-lg">💡</span>
                     Ejemplo: Hotel Boutique de 2,500 m²
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-                    <div className="text-sm">
+                    <div className="text-xs md:text-sm">
                       <p className="text-slate-500 mb-1">Superficie</p>
                       <p className="font-semibold text-slate-800">2,500 m²</p>
                     </div>
-                    <div className="text-sm">
+                    <div className="text-xs md:text-sm">
                       <p className="text-slate-500 mb-1">Tipo</p>
                       <p className="font-semibold text-slate-800">Turismo</p>
                     </div>
-                    <div className="text-sm">
+                    <div className="text-xs md:text-sm">
                       <p className="text-slate-500 mb-1">Material</p>
-                      <p className="font-semibold text-slate-800">Mexalit (95% circular)</p>
+                      <p className="font-semibold text-slate-800">TechBuild (92% circular)</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-200">
                     <div className="text-center">
-                      <p className="text-2xl font-bold text-green-600">1,950 ton</p>
-                      <p className="text-xs text-slate-600 mt-1">CO₂ evitado</p>
+                      <p className="text-2xl md:text-3xl font-bold text-green-600">1,950 ton</p>
+                      <p className="text-xs md:text-sm text-slate-600 mt-1">CO₂ evitado</p>
                     </div>
                     <div className="text-center">
-                      <p className="text-2xl font-bold text-blue-600">$2.55M</p>
-                      <p className="text-xs text-slate-600 mt-1">Ahorro económico</p>
+                      <p className="text-2xl md:text-3xl font-bold text-blue-600">$2.55M</p>
+                      <p className="text-xs md:text-sm text-slate-600 mt-1">Ahorro económico</p>
                     </div>
                     <div className="text-center">
-                      <p className="text-2xl font-bold text-teal-600">95%</p>
-                      <p className="text-xs text-slate-600 mt-1">Circularidad</p>
+                      <p className="text-2xl md:text-3xl font-bold text-teal-600">95%</p>
+                      <p className="text-xs md:text-sm text-slate-600 mt-1">Circularidad</p>
                     </div>
                   </div>
                 </div>
@@ -207,7 +207,7 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Sparkles className="w-5 h-5 text-blue-500" />
-                <h2 className="text-xl font-semibold text-slate-800">
+                <h2 className="text-xl md:text-2xl font-semibold text-slate-800">
                   {hayResultados ? "Tus Parámetros" : "Ingresa tus Parámetros"}
                 </h2>
               </div>
@@ -215,7 +215,7 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Metros Cuadrados */}
                 <div className="space-y-3">
-                  <label className="text-sm font-medium text-slate-700 block">
+                  <label className="text-sm md:text-base font-medium text-slate-700 block">
                     Metros Cuadrados
                   </label>
                   <Input
@@ -224,13 +224,13 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                     value={m2}
                     onChange={(e) => setM2(e.target.value)}
                     min="0"
-                    className="h-12 text-base bg-white border-slate-300 focus:border-blue-500 focus:ring-blue-500"
+                    className="h-12 text-sm md:text-base bg-white border-slate-300 focus:border-blue-500 focus:ring-blue-500"
                   />
                 </div>
 
                 {/* Tipo de Proyecto */}
                 <div className="space-y-3">
-                  <label className="text-sm font-medium text-slate-700 block">
+                  <label className="text-sm md:text-base font-medium text-slate-700 block">
                     Tipo de Proyecto
                   </label>
                   <Select value={tipoProyecto} onValueChange={setTipoProyecto}>
@@ -249,11 +249,11 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
 
                 {/* Material Principal */}
                 <div className="space-y-3">
-                  <label className="text-sm font-medium text-slate-700 block">
+                  <label className="text-sm md:text-base font-medium text-slate-700 block">
                     Material Principal
                   </label>
                   <Select value={material} onValueChange={setMaterial}>
-                    <SelectTrigger className="h-12 text-base bg-white border-slate-300 focus:border-blue-500 focus:ring-blue-500">
+                    <SelectTrigger className="h-12 text-sm md:text-base bg-white border-slate-300 focus:border-blue-500 focus:ring-blue-500">
                       <SelectValue placeholder="Selecciona material" />
                     </SelectTrigger>
                     <SelectContent>
@@ -275,7 +275,7 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <p className="text-sm text-amber-700">
+                  <p className="text-xs md:text-sm text-amber-700">
                     ⚠️ Completa todos los campos para calcular las métricas ambientales
                   </p>
                 </motion.div>
@@ -292,7 +292,7 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
               >
                 <div className="flex items-center gap-3">
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-                  <h2 className="text-lg font-semibold text-slate-700">Resultados</h2>
+                  <h2 className="text-xl md:text-2xl font-semibold text-slate-700">Resultados</h2>
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
                 </div>
 
@@ -356,7 +356,7 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                         ¿Qué tan sustentable es tu proyecto?
                       </h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Usando sistemas ligeros como <strong>Mexalit</strong> o <strong>Cempanel</strong>, 
+                        Usando sistemas ligeros como <strong>TechBuild</strong> o <strong>EcoPanel</strong>, 
                         reduces significativamente las emisiones de CO₂, optimizas tiempos de construcción 
                         y aprovechas materiales con alta circularidad. Una apuesta por la construcción eficiente y responsable.
                       </p>

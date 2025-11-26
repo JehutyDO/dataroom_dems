@@ -43,34 +43,40 @@ const CarouselSection = () => {
 
   const slides = [
     {
-      icon: FolderKanban,
+      icon: Database,
       color: 'from-blue-500 to-blue-600',
       title: '¿Qué es un Dataroom?',
-      description: 'Un dataroom es un espacio digital seguro donde se concentra información clave para análisis, toma de decisiones y evaluación de proyectos. Aquí encontrarás documentación técnica, modelos financieros, simuladores, cadenas de valor y módulos interactivos.'
+      description: 'Un Dataroom es un espacio seguro que concentra toda la información crítica de un proyecto en un solo lugar: documentos, métricas, modelos financieros, análisis técnicos, simuladores interactivos y evidencia estratégica para la toma de decisiones. Su propósito es permitir que cualquier inversionista, cliente o aliado pueda evaluar un proyecto de forma rápida, transparente y confiable, reduciendo riesgos y acelerando acuerdos.'
     },
     {
       icon: TrendingUp,
       color: 'from-green-500 to-green-600',
+      title: '¿Para qué sirve?',
+      description: 'El Dataroom funciona como una plataforma viva donde las partes interesadas pueden: revisar documentación actualizada sin enviar archivos por correo, tener una versión única de la verdad (Single Source of Truth), comparar opciones y escenarios sin intermediarios, acceder a módulos interactivos que simulan costo, tiempo e impacto, facilitar auditorías y rondas de inversión, y visualizar el potencial técnico, económico y ambiental del sistema DEMS.'
+    },
+    {
+      icon: Shield,
+      color: 'from-purple-500 to-purple-600',
       title: '¿Por qué es importante?',
-      description: 'Permite evaluar rápida y cuidadosamente los componentes críticos de un proyecto: costo, tiempo, materiales, emisiones, eficiencia, riesgos y oportunidades. Todo en un solo lugar y actualizado en tiempo real.'
+      description: 'Permite evaluar de forma rápida, trazable y estructurada los componentes críticos de un proyecto: costo total, tiempos de obra, consumos y materiales, emisiones y circularidad, riesgos operativos, viabilidad financiera y oportunidades de optimización. Todo en tiempo real — evitando duplicidad de archivos, pérdidas de información o versiones incorrectas.'
     },
     {
       icon: LayoutDashboard,
-      color: 'from-purple-500 to-purple-600',
-      title: 'Contenido del Dataroom DEMS',
-      description: 'Arquitectura modular • Materiales y sistemas constructivos • Economía circular • Documentación técnica • Alianzas DEMS–Mexalit–Cempanel • Módulos interactivos (Simulador, ESG, Materiales)'
+      color: 'from-teal-500 to-teal-600',
+      title: '¿Qué encontrarás aquí?',
+      description: 'Este Dataroom reúne seis áreas clave: (1) Módulos Interactivos — simuladores y herramientas dinámicas, (2) Modelos de Negocio — estructuras de operación y escalamiento, (3) Documentación Técnica — planos, certificaciones y metodologías, (4) Arquitectura Modular — componentes y configuraciones adaptables, (5) Economía Circular — trazabilidad y reuso de materiales, (6) Alianzas y Expansión — colaboración estratégica entre empresas.'
     },
     {
       icon: Compass,
-      color: 'from-teal-500 to-teal-600',
-      title: 'Cómo navegarlo',
-      description: 'Usa el menú lateral para explorar las distintas categorías. Cada módulo interactivo se abre dentro de la misma vista. Puedes regresar a "Inicio" en cualquier momento para orientación general.'
+      color: 'from-indigo-500 to-indigo-600',
+      title: '¿Para quién fue creado?',
+      description: 'Este espacio está diseñado para perfiles que requieren certeza total antes de aprobar un proyecto: Inversionistas, Directores de Operaciones y Construcción, Gerencias de Compras, Equipos Técnicos, Desarrolladores, Áreas ESG (Ambiental–Social–Gobernanza), Arquitectos e Ingenieros, y Socios estratégicos. Cada módulo ofrece una lectura distinta según el rol de quien lo consulta.'
     },
     {
       icon: Lock,
-      color: 'from-indigo-500 to-indigo-600',
-      title: 'Seguridad y Confidencialidad',
-      description: 'Toda la información está protegida con cifrado de extremo a extremo. Acceso controlado por roles y auditoría completa de todas las acciones. Cumplimos con los estándares internacionales de protección de datos.'
+      color: 'from-orange-500 to-orange-600',
+      title: '¿Qué hace diferente a este Dataroom?',
+      description: 'A diferencia de un Dropbox, Google Drive o PDF suelto, aquí todo está ordenado, indexado y jerarquizado. Los datos se actualizan en tiempo real, se incluyen simuladores interactivos, hay KPIs y lecturas inteligentes. Está diseñado para procesos de inversión, cierre comercial, auditoría, licitación, certificación y cumplimiento ESG. El contenido se revisa y actualiza de manera recurrente para mantener trazabilidad y transparencia total.'
     }
   ];
 
@@ -114,7 +120,7 @@ const CarouselSection = () => {
   return (
     <div className="relative w-full max-w-4xl mx-auto">
       {/* Carrusel Container */}
-      <div className="relative h-[420px] md:h-[380px] overflow-hidden rounded-[28px]">
+      <div className="relative h-[340px] md:h-[320px] overflow-hidden rounded-[28px]">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={currentSlide}
@@ -141,7 +147,7 @@ const CarouselSection = () => {
             }}
             className="absolute w-full h-full cursor-grab active:cursor-grabbing group/card"
           >
-            <div className="bg-gradient-to-br from-white/95 to-blue-50/70 backdrop-blur-xl border-2 border-blue-500/20 rounded-[28px] p-8 md:p-12 lg:p-14 shadow-2xl hover:shadow-blue-500/10 h-full flex flex-col justify-center transition-shadow duration-300">
+            <div className="bg-gradient-to-br from-white/95 to-blue-50/70 backdrop-blur-xl border-2 border-blue-500/20 rounded-[28px] p-6 md:p-8 lg:p-10 shadow-2xl hover:shadow-blue-500/10 h-full flex flex-col justify-center transition-shadow duration-300">
               <motion.div 
                 className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${slides[currentSlide].color} flex items-center justify-center mb-6 shadow-lg shadow-${slides[currentSlide].color.split('-')[1]}-500/30`}
                 initial={{ scale: 0, rotate: -180 }}
@@ -156,7 +162,7 @@ const CarouselSection = () => {
                 <CurrentIcon className="w-8 h-8 text-white" />
               </motion.div>
               <motion.h2 
-                className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 md:mb-5 leading-tight"
+                className="text-xl md:text-2xl lg:text-3xl font-bold text-slate-900 mb-3 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -164,7 +170,7 @@ const CarouselSection = () => {
                 {slides[currentSlide].title}
               </motion.h2>
               <motion.p 
-                className="text-slate-700 text-base md:text-lg lg:text-xl leading-relaxed md:leading-loose font-light"
+                className="text-slate-700 text-sm md:text-base lg:text-lg leading-relaxed font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -340,7 +346,7 @@ const Dataroom = () => {
               <StyledText variant="default" className="text-xl sm:text-2xl" />
             </div>
             <div className="hidden sm:block h-6 w-px bg-slate-300" />
-            <span className="hidden sm:block text-sm text-slate-500 font-light">Dataroom</span>
+            <span className="hidden sm:block text-sm text-slate-500 font-light">Data Room</span>
           </div>
 
           {/* Logout Button */}
@@ -373,7 +379,7 @@ const Dataroom = () => {
               whileTap={{ scale: 0.98 }}
             >
               <Menu className="w-4 h-4" />
-              {!sidebarCollapsed && <span className="text-sm font-medium">Colapsar</span>}
+              {!sidebarCollapsed && <span className="text-sm font-medium">Comprimir</span>}
             </motion.button>
           </div>
 
@@ -489,13 +495,13 @@ const Dataroom = () => {
             className="w-full"
           >
             {selectedCategory === 'home' ? (
-              <div className="w-full max-w-7xl mx-auto space-y-12">
+              <div className="w-full max-w-7xl mx-auto space-y-6">
                 {/* Hero Section */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="relative overflow-hidden bg-gradient-to-br from-white/80 to-blue-50/50 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-8 lg:p-12 shadow-2xl"
+                  className="relative overflow-hidden bg-gradient-to-br from-white/80 to-blue-50/50 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 lg:p-8 shadow-2xl"
                 >
                   {/* Patrón arquitectónico de fondo */}
                   <div className="absolute inset-0 opacity-5">
@@ -524,17 +530,16 @@ const Dataroom = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
-                      className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4"
+                      className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-3"
                     >
-                      Bienvenido al Dataroom{' '}
-                      <StyledText variant="gradient" className="text-4xl md:text-5xl lg:text-6xl inline" />
+                      Bienvenido al <StyledText variant="gradient" className="text-3xl md:text-4xl lg:text-5xl inline" /> Data Room
                     </motion.h1>
 
                     <motion.p
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}
-                      className="text-lg md:text-xl text-slate-600 max-w-3xl leading-relaxed"
+                      className="text-base md:text-lg text-slate-600 max-w-3xl leading-relaxed"
                     >
                       Una plataforma segura y centralizada para explorar decisiones técnicas, 
                       financieras y sustentables.
@@ -545,35 +550,148 @@ const Dataroom = () => {
                 {/* Carrusel de Tarjetas Explicativas */}
                 <CarouselSection />
 
-                {/* Puntos Clave - KPIs */}
+                {/* Tarjetas Informativas con Iconos */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9 }}
+                  transition={{ delay: 0.8 }}
+                  className="space-y-4"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-                    <h2 className="text-lg font-semibold text-slate-700">Puntos Clave</h2>
+                    <h2 className="text-xl font-semibold text-slate-800">Características Clave del Dataroom</h2>
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+                  </div>
+
+                  {/* Grid de Tarjetas Informativas */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {/* Card 1 - Qué es */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.9 }}
+                      className="group bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200/50 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <Database className="w-7 h-7 text-white" />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-800 mb-2">Qué es un Dataroom</h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Un espacio seguro que concentra toda la información relevante de un proyecto para su evaluación rápida, transparente y estructurada.
+                      </p>
+                    </motion.div>
+
+                    {/* Card 2 - Para qué sirve */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.0 }}
+                      className="group bg-gradient-to-br from-green-50 to-white border-2 border-green-200/50 rounded-2xl p-6 hover:shadow-xl hover:shadow-green-500/20 hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <TrendingUp className="w-7 h-7 text-white" />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-800 mb-2">Para qué sirve</h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Facilita decisiones informadas, acelera cierres comerciales, reduce riesgos y elimina la duplicidad de documentos o versiones.
+                      </p>
+                    </motion.div>
+
+                    {/* Card 3 - Qué contiene */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.1 }}
+                      className="group bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200/50 rounded-2xl p-6 hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <LayoutDashboard className="w-7 h-7 text-white" />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-800 mb-2">Qué contiene</h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Simuladores, modelos de negocio, documentación técnica, arquitectura modular, economía circular y alianzas estratégicas.
+                      </p>
+                    </motion.div>
+
+                    {/* Card 4 - Por qué es valioso */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.2 }}
+                      className="group bg-gradient-to-br from-orange-50 to-white border-2 border-orange-200/50 rounded-2xl p-6 hover:shadow-xl hover:shadow-orange-500/20 hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <Shield className="w-7 h-7 text-white" />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-800 mb-2">Por qué es valioso</h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Reúne métricas clave de costo, tiempo, emisiones, materialidad, eficiencia, riesgos y oportunidades en un solo lugar.
+                      </p>
+                    </motion.div>
+
+                    {/* Card 5 - Actualización Continua */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.3 }}
+                      className="group bg-gradient-to-br from-teal-50 to-white border-2 border-teal-200/50 rounded-2xl p-6 hover:shadow-xl hover:shadow-teal-500/20 hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <Recycle className="w-7 h-7 text-white" />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-800 mb-2">Actualización Continua</h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Todo el contenido se revisa y actualiza de manera recurrente para mantener trazabilidad y transparencia total.
+                      </p>
+                    </motion.div>
+
+                    {/* Card 6 - Seguridad */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.4 }}
+                      className="group bg-gradient-to-br from-indigo-50 to-white border-2 border-indigo-200/50 rounded-2xl p-6 hover:shadow-xl hover:shadow-indigo-500/20 hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <Lock className="w-7 h-7 text-white" />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-800 mb-2">Seguridad y Acceso</h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Información protegida con cifrado de extremo a extremo. Acceso controlado por roles y auditoría completa de acciones.
+                      </p>
+                    </motion.div>
+                  </div>
+                </motion.div>
+
+                {/* KPIs Numéricos */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.5 }}
+                >
+                  <div className="flex items-center gap-3 mb-6 mt-8">
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
+                    <h2 className="text-lg font-semibold text-slate-700">Métricas del Dataroom</h2>
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
                   </div>
 
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
-                      { label: 'Documentos', value: '150+', icon: FileText },
-                      { label: 'Categorías', value: '8', icon: Layers },
-                      { label: 'Módulos', value: '5', icon: LayoutDashboard },
-                      { label: 'Actualizado', value: 'Hoy', icon: Database },
+                      { label: 'Documentos Disponibles', value: '150+', icon: FileText, color: 'blue' },
+                      { label: 'Categorías Organizadas', value: '6', icon: Layers, color: 'green' },
+                      { label: 'Módulos Interactivos', value: '5', icon: LayoutDashboard, color: 'purple' },
+                      { label: 'Última Actualización', value: 'Hoy', icon: Database, color: 'orange' },
                     ].map((stat, index) => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 1.0 + index * 0.1 }}
-                        className="bg-gradient-to-br from-blue-50 to-white border border-blue-500/20 rounded-xl p-6 text-center hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200"
+                        transition={{ delay: 1.6 + index * 0.1 }}
+                        className={`bg-gradient-to-br from-${stat.color}-50 to-white border-2 border-${stat.color}-200/50 rounded-xl p-5 text-center hover:shadow-xl hover:shadow-${stat.color}-500/20 hover:-translate-y-1 transition-all duration-300 group`}
                       >
-                        <stat.icon className="w-6 h-6 text-blue-600 mx-auto mb-3" />
-                        <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
-                        <div className="text-sm text-slate-600">{stat.label}</div>
+                        <stat.icon className={`w-6 h-6 text-${stat.color}-600 mx-auto mb-3 group-hover:scale-110 transition-transform`} />
+                        <div className={`text-3xl font-bold text-${stat.color}-600 mb-2`}>{stat.value}</div>
+                        <div className="text-xs text-slate-600 font-medium">{stat.label}</div>
                       </motion.div>
                     ))}
                   </div>
@@ -649,7 +767,7 @@ const Dataroom = () => {
                         },
                         {
                           title: 'Cadena de Valor Circular',
-                          description: 'Visualiza el ecosistema entre DEMS-Mexalit-Cempanel',
+                          description: 'Visualiza el ecosistema entre DEMS y socios estratégicos',
                           icon: <Workflow className="w-8 h-8" />,
                           id: 'cadena',
                           color: 'from-teal-500 to-teal-600'
@@ -726,14 +844,14 @@ const Dataroom = () => {
                         <FileText className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-semibold text-slate-800">Fichas Técnicas</h2>
-                        <p className="text-sm text-slate-500">Especificaciones de materiales y sistemas</p>
+                        <h2 className="text-lg font-semibold text-slate-800">Fichas Técnicas</h2>
+                        <p className="text-xs text-slate-500">Especificaciones de materiales y sistemas</p>
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {[
-                        { name: 'Ficha Técnica Mexalit', size: '2.4 MB', date: '15 Nov 2024' },
-                        { name: 'Ficha Técnica Cempanel', size: '1.8 MB', date: '12 Nov 2024' },
+                        { name: 'Ficha Técnica TechBuild', size: '2.4 MB', date: '15 Nov 2024' },
+                        { name: 'Ficha Técnica EcoPanel', size: '1.8 MB', date: '12 Nov 2024' },
                         { name: 'Sistema de Fachadas Modulares', size: '3.1 MB', date: '08 Nov 2024' },
                         { name: 'Componentes Estructurales', size: '2.9 MB', date: '05 Nov 2024' },
                       ].map((doc, index) => (
@@ -775,7 +893,7 @@ const Dataroom = () => {
                         <Building className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-semibold text-slate-800">Manuales de Instalación</h2>
+                        <h2 className="text-lg font-semibold text-slate-800">Manuales de Instalación</h2>
                         <p className="text-sm text-slate-500">Guías paso a paso para implementación</p>
                       </div>
                     </div>
@@ -823,7 +941,7 @@ const Dataroom = () => {
                         <Shield className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-semibold text-slate-800">Certificaciones y Normas</h2>
+                        <h2 className="text-lg font-semibold text-slate-800">Certificaciones y Normas</h2>
                         <p className="text-sm text-slate-500">Documentos regulatorios y cumplimiento</p>
                       </div>
                     </div>
@@ -872,7 +990,7 @@ const Dataroom = () => {
                         <Briefcase className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-semibold text-slate-800">Casos de Estudio</h2>
+                        <h2 className="text-lg font-semibold text-slate-800">Casos de Estudio</h2>
                         <p className="text-sm text-slate-500">Proyectos reales implementados</p>
                       </div>
                     </div>
@@ -920,7 +1038,7 @@ const Dataroom = () => {
                         <Handshake className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-semibold text-slate-800">Propuestas Comerciales</h2>
+                        <h2 className="text-lg font-semibold text-slate-800">Propuestas Comerciales</h2>
                         <p className="text-sm text-slate-500">Modelos de negocio y cotizaciones</p>
                       </div>
                     </div>
@@ -961,13 +1079,13 @@ const Dataroom = () => {
               </div>
             ) : selectedCategory === 'partnerships' ? (
               // Alianzas Estratégicas Section
-              <div className="w-full max-w-7xl mx-auto space-y-12">
+              <div className="w-full max-w-7xl mx-auto space-y-6">
                 {/* Hero Section */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="relative overflow-hidden bg-gradient-to-br from-white/80 to-blue-50/50 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-8 lg:p-12 shadow-2xl"
+                  className="relative overflow-hidden bg-gradient-to-br from-white/80 to-blue-50/50 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 lg:p-8 shadow-2xl"
                 >
                   {/* Patrón arquitectónico de fondo */}
                   <div className="absolute inset-0 opacity-5">
@@ -996,17 +1114,17 @@ const Dataroom = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
-                      className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4"
+                      className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-3"
                     >
                       Alianzas en Acción{' '}
-                      <StyledText variant="gradient" className="text-4xl md:text-5xl lg:text-6xl inline" />
+                      <StyledText variant="gradient" className="text-2xl md:text-3xl lg:text-4xl inline" />
                     </motion.h1>
 
                     <motion.p
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}
-                      className="text-lg md:text-xl text-slate-600 max-w-3xl leading-relaxed"
+                      className="text-base md:text-lg text-slate-600 max-w-3xl leading-relaxed"
                     >
                       Un ecosistema en construcción de empresas, profesionales y proyectos explorando 
                       nuevas formas de colaborar en la construcción modular sustentable.
@@ -1057,16 +1175,16 @@ const Dataroom = () => {
                         areas: ['Arquitectura', 'Ingeniería', 'Prefabricación']
                       },
                       {
-                        name: 'Mexalit',
-                        role: 'Sistemas de fibrocemento',
+                        name: 'TechBuild',
+                        role: 'Sistemas constructivos avanzados',
                         color: 'from-orange-500 to-orange-600',
                         projects: 'Alianza en exploración',
                         team: 'Equipos técnicos',
                         areas: ['Cubiertas', 'Fachadas', 'Manufactura']
                       },
                       {
-                        name: 'Cempanel',
-                        role: 'Paneles estructurales',
+                        name: 'EcoPanel',
+                        role: 'Paneles estructurales sostenibles',
                         color: 'from-teal-500 to-teal-600',
                         projects: 'Colaboración potencial',
                         team: 'Especialistas',
@@ -1249,12 +1367,12 @@ const Dataroom = () => {
                     {[
                       { name: 'Arq. María González', role: 'Directora de Diseño', company: 'DEMS', color: 'bg-blue-500' },
                       { name: 'Ing. Carlos Ramírez', role: 'Jefe de Ingeniería', company: 'DEMS', color: 'bg-blue-500' },
-                      { name: 'Contacto Técnico', role: 'Representante', company: 'Mexalit', color: 'bg-orange-500' },
-                      { name: 'Contacto Comercial', role: 'Enlace', company: 'Cempanel', color: 'bg-teal-500' },
+                      { name: 'Contacto Técnico', role: 'Representante', company: 'TechBuild', color: 'bg-orange-500' },
+                      { name: 'Contacto Comercial', role: 'Enlace', company: 'EcoPanel', color: 'bg-teal-500' },
                       { name: 'Ing. Sofia López', role: 'Sustentabilidad', company: 'DEMS', color: 'bg-blue-500' },
-                      { name: 'Contacto Industrial', role: 'Manufactura', company: 'Mexalit', color: 'bg-orange-500' },
+                      { name: 'Contacto Industrial', role: 'Manufactura', company: 'TechBuild', color: 'bg-orange-500' },
                       { name: 'Arq. Patricia Ruiz', role: 'Diseño Modular', company: 'DEMS', color: 'bg-blue-500' },
-                      { name: 'Contacto Técnico', role: 'Certificaciones', company: 'Cempanel', color: 'bg-teal-500' },
+                      { name: 'Contacto Técnico', role: 'Certificaciones', company: 'EcoPanel', color: 'bg-teal-500' },
                       { name: 'Téc. Laura Hernández', role: 'Control Calidad', company: 'DEMS', color: 'bg-blue-500' },
                       { name: 'Arq. Diego Fernández', role: 'Prefabricación', company: 'DEMS', color: 'bg-blue-500' },
                     ].map((member, index) => (
@@ -1336,13 +1454,13 @@ const Dataroom = () => {
               </div>
             ) : selectedCategory === 'business' ? (
               // Modelos de Negocio Section
-              <div className="w-full max-w-7xl mx-auto space-y-12">
+              <div className="w-full max-w-7xl mx-auto space-y-6">
                 {/* Hero Section */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="relative overflow-hidden bg-gradient-to-br from-white/80 to-blue-50/50 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-8 lg:p-12 shadow-2xl"
+                  className="relative overflow-hidden bg-gradient-to-br from-white/80 to-blue-50/50 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 lg:p-8 shadow-2xl"
                 >
                   {/* Patrón arquitectónico de fondo */}
                   <div className="absolute inset-0 opacity-5">
@@ -1371,17 +1489,17 @@ const Dataroom = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
-                      className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4"
+                      className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-3"
                     >
                       Modelos de Negocio{' '}
-                      <StyledText variant="gradient" className="text-4xl md:text-5xl lg:text-6xl inline" />
+                      <StyledText variant="gradient" className="text-2xl md:text-3xl lg:text-4xl inline" />
                     </motion.h1>
 
                     <motion.p
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}
-                      className="text-lg md:text-xl text-slate-600 max-w-3xl leading-relaxed"
+                      className="text-base md:text-lg text-slate-600 max-w-3xl leading-relaxed"
                     >
                       Estructuras de valor que definen cómo operamos, construimos y generamos impacto.
                     </motion.p>
@@ -1405,7 +1523,7 @@ const Dataroom = () => {
                     },
                     {
                       icon: Layers,
-                      title: 'Suministro de Sistemas Constructivos (Mexalit / Cempanel)',
+                      title: 'Suministro de Sistemas Constructivos (TechBuild / EcoPanel)',
                       description: 'Suministro técnico de láminas, paneles y soluciones de fibrocemento para arquitectura ligera.',
                       idealFor: 'Constructoras, desarrolladores y despachos de arquitectura.',
                       benefits: [

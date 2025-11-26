@@ -82,10 +82,10 @@ const Proyectos = ({ hideNavbar = false }: ProyectosProps) => {
                 <FolderKanban className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <div className="space-y-2">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground">
                   Dashboard de Proyectos <StyledText />
                 </h1>
-                <p className="text-sm sm:text-base lg:text-lg text-foreground/70">
+                <p className="text-sm md:text-base text-foreground/70">
                   Demo 5 — Visualiza proyectos activos y métricas clave
                 </p>
               </div>
@@ -181,7 +181,7 @@ const Proyectos = ({ hideNavbar = false }: ProyectosProps) => {
                               style={{ width: `${proyecto.avance}%` }}
                             />
                           </div>
-                          <span className="text-sm text-muted-foreground">{proyecto.avance}%</span>
+                          <span className="text-xs md:text-sm text-muted-foreground">{proyecto.avance}%</span>
                         </div>
                       </TableCell>
                       <TableCell className="text-muted-foreground">{proyecto.responsable}</TableCell>
