@@ -46,7 +46,7 @@ const CarouselSection = () => {
       icon: Database,
       color: 'from-blue-500 to-blue-600',
       title: '¿Qué es un Dataroom?',
-      description: 'Un Dataroom es un espacio seguro que concentra toda la información crítica de un proyecto en un solo lugar: documentos, métricas, modelos financieros, análisis técnicos, simuladores interactivos y evidencia estratégica para la toma de decisiones. Su propósito es permitir que cualquier inversionista, cliente o aliado pueda evaluar un proyecto de forma rápida, transparente y confiable, reduciendo riesgos y acelerando acuerdos.'
+      description: 'Un Dataroom es un espacio seguro que concentra en un solo lugar información crítica alrededor de proyectos específicos:  documentos técnico-constructivos, métricas, análisis de riesgos-oportunidades, modelos financieros, simuladores y evidencia estratégica para la toma de decisiones.  Su propósito es permitir que nuestros clientes, inversionistas y aliados puedan evaluar diferentes soluciones a sus necesidades, así como oportunidades alineadas a sus objetivos, reduciendo riesgos y acelerando acuerdos.'
     },
     {
       icon: TrendingUp,
@@ -70,13 +70,13 @@ const CarouselSection = () => {
       icon: Compass,
       color: 'from-indigo-500 to-indigo-600',
       title: '¿Para quién fue creado?',
-      description: 'Este espacio está diseñado para perfiles que requieren certeza total antes de aprobar un proyecto: Inversionistas, Directores de Operaciones y Construcción, Gerencias de Compras, Equipos Técnicos, Desarrolladores, Áreas ESG (Ambiental–Social–Gobernanza), Arquitectos e Ingenieros, y Socios estratégicos. Cada módulo ofrece una lectura distinta según el rol de quien lo consulta.'
+      description: 'Este espacio fue creado para personas y organizaciones interesadas en la toma de decisiones informadas y conscientes, a través de datos y conocimiento adecuadamente respaldados.  Para quienes buscan resolver sus necesidades e invertir sus recursos de manera inteligente a través de procesos ágiles y transparentes.  Procesos personalizados gracias a módulos inteligentes que ofrecen una lectura distinta según los intereses y perfil de quienes lo consulta.'
     },
     {
       icon: Lock,
       color: 'from-orange-500 to-orange-600',
       title: '¿Qué hace diferente a este Dataroom?',
-      description: 'A diferencia de un Dropbox, Google Drive o PDF suelto, aquí todo está ordenado, indexado y jerarquizado. Los datos se actualizan en tiempo real, se incluyen simuladores interactivos, hay KPIs y lecturas inteligentes. Está diseñado para procesos de inversión, cierre comercial, auditoría, licitación, certificación y cumplimiento ESG. El contenido se revisa y actualiza de manera recurrente para mantener trazabilidad y transparencia total.'
+      description: 'A diferencia de servicios comerciales de almacenamiento en la nube, nuestro Data Room es una red inteligente de conocimiento estructurado y orientado a las necesidades de una gran diversidad de usuarios. Quienes a través de la toma de decisiones informadas y conscientes, pueden encontrar con nuestro acompañamiento y respaldo valor económico, social y ambiental, bajo una visión integral y personalizada. El contenido general se actualiza de manera recurrente a través de procesos internos, así como de las mejores fuentes externas, garantizando transparencia y fiabilidad.'
     }
   ];
 
@@ -559,7 +559,7 @@ const Dataroom = () => {
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-                    <h2 className="text-xl font-semibold text-slate-800">Características Clave del Dataroom</h2>
+                    <h2 className="text-xl font-semibold text-slate-800">Características Clave del Data Room</h2>
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
                   </div>
 
@@ -577,7 +577,7 @@ const Dataroom = () => {
                       </div>
                       <h3 className="text-lg font-bold text-slate-800 mb-2">Qué es un Dataroom</h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Un espacio seguro que concentra toda la información relevante de un proyecto para su evaluación rápida, transparente y estructurada.
+                        Un espacio seguro que concentra de forma estructurada, inteligente e interactiva  información estratégica y sólidamente respaldada alrededor de proyectos y temas específicos.
                       </p>
                     </motion.div>
 
@@ -593,7 +593,7 @@ const Dataroom = () => {
                       </div>
                       <h3 className="text-lg font-bold text-slate-800 mb-2">Para qué sirve</h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Facilita decisiones informadas, acelera cierres comerciales, reduce riesgos y elimina la duplicidad de documentos o versiones.
+                        Facilita decisiones informadas, acelera acuerdos y cierres comerciales, reduce riesgos y visibiliza oportunidades.
                       </p>
                     </motion.div>
 
@@ -609,7 +609,7 @@ const Dataroom = () => {
                       </div>
                       <h3 className="text-lg font-bold text-slate-800 mb-2">Qué contiene</h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Simuladores, modelos de negocio, documentación técnica, arquitectura modular, economía circular y alianzas estratégicas.
+                        Soluciones técnicas, arquitectura modular, economía circular, catalizadores de modelos de negocio, estudios de caso y simuladores.
                       </p>
                     </motion.div>
 
@@ -625,7 +625,7 @@ const Dataroom = () => {
                       </div>
                       <h3 className="text-lg font-bold text-slate-800 mb-2">Por qué es valioso</h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Reúne métricas clave de costo, tiempo, emisiones, materialidad, eficiencia, riesgos y oportunidades en un solo lugar.
+                        Permite en un solo lugar la interacción de sus usuarios con información sólidamente respaldada y alineada a sus intereses y necesidades.
                       </p>
                     </motion.div>
 
@@ -641,7 +641,7 @@ const Dataroom = () => {
                       </div>
                       <h3 className="text-lg font-bold text-slate-800 mb-2">Actualización Continua</h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Todo el contenido se revisa y actualiza de manera recurrente para mantener trazabilidad y transparencia total.
+                        Todos los contenidos se revisan y actualizan de manera recurrente para mantener su trazabilidad, vigencia y solidez.
                       </p>
                     </motion.div>
 
