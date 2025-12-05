@@ -17,8 +17,8 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    title: '¿Qué es un Dataroom?',
-    content: 'Un Dataroom es un espacio seguro y personalizado donde clientes, inversionistas y aliados estratégicos pueden consultar e interactuar con información y documentos clave sólidamente respaldados, sobre temas y proyectos alineados a sus intereses, con el objeto de adquirir conocimiento para una mejor toma de decisiones.',
+    title: '¿Qué es un Data Room?',
+    content: 'Un Data Room es un espacio seguro y personalizado donde clientes, inversionistas y aliados estratégicos pueden consultar e interactuar con información y documentos clave sólidamente respaldados, sobre temas y proyectos alineados a sus intereses, con el objeto de adquirir conocimiento para una mejor toma de decisiones.',
     icon: <Database className="w-16 h-16" />,
   },
   {
@@ -38,7 +38,7 @@ const slides: Slide[] = [
   },
   {
     id: 3,
-    title: 'Propósito del Dataroom',
+    title: 'Propósito del Data Room',
     content: 'Proveer información confiable, organizada y actualizada para facilitar decisiones estratégicas a nuestros clientes, inversionistas y aliados estratégicos.',
     icon: <Target className="w-16 h-16" />,
   },
@@ -108,7 +108,7 @@ const IntroSlides = () => {
           <div className="flex items-center justify-center gap-2">
             <StyledText variant="default" className="text-3xl" />
           </div>
-          <p className="text-xs text-slate-400 font-light mt-1 tracking-wider">DATAROOM</p>
+          <p className="text-xs text-slate-400 font-light mt-1 tracking-wider">Data Room</p>
         </motion.div>
 
         {/* Slide Container */}
@@ -185,7 +185,7 @@ const IntroSlides = () => {
                     onClick={handleFinish}
                     className="h-12 px-8 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-xl font-medium shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30"
                   >
-                    Ir al Dataroom →
+                    Ir al Data Room →
                   </Button>
                 </motion.div>
               )}

@@ -79,7 +79,7 @@ const CalculadoraESG = ({ hideNavbar = false }: CalculadoraESGProps) => {
                   className="hover:bg-blue-500/10 hover:border-blue-500/60 transition-all duration-300"
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" />
-                  Volver al Dataroom
+                  Volver al Data Room
                 </Button>
               </Link>
             )}

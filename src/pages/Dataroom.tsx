@@ -45,14 +45,14 @@ const CarouselSection = () => {
     {
       icon: Database,
       color: 'from-blue-500 to-blue-600',
-      title: '¿Qué es un Dataroom?',
-      description: 'Un Dataroom es un espacio seguro que concentra en un solo lugar información crítica alrededor de proyectos específicos:  documentos técnico-constructivos, métricas, análisis de riesgos-oportunidades, modelos financieros, simuladores y evidencia estratégica para la toma de decisiones.  Su propósito es permitir que nuestros clientes, inversionistas y aliados puedan evaluar diferentes soluciones a sus necesidades, así como oportunidades alineadas a sus objetivos, reduciendo riesgos y acelerando acuerdos.'
+      title: '¿Qué es un Data Room?',
+      description: 'Un Data Room es un espacio seguro que concentra en un solo lugar información crítica alrededor de proyectos específicos:  documentos técnico-constructivos, métricas, análisis de riesgos-oportunidades, modelos financieros, simuladores y evidencia estratégica para la toma de decisiones.  Su propósito es permitir que nuestros clientes, inversionistas y aliados puedan evaluar diferentes soluciones a sus necesidades, así como oportunidades alineadas a sus objetivos, reduciendo riesgos y acelerando acuerdos.'
     },
     {
       icon: TrendingUp,
       color: 'from-green-500 to-green-600',
       title: '¿Para qué sirve?',
-      description: 'El Dataroom funciona como una plataforma viva donde las partes interesadas pueden: revisar documentación actualizada sin enviar archivos por correo, tener una versión única de la verdad (Single Source of Truth), comparar opciones y escenarios sin intermediarios, acceder a módulos interactivos que simulan costo, tiempo e impacto, facilitar auditorías y rondas de inversión, y visualizar el potencial técnico, económico y ambiental del sistema DEMS.'
+      description: 'El Data Room funciona como una plataforma viva donde las partes interesadas pueden: revisar documentación actualizada sin enviar archivos por correo, tener una versión única de la verdad (Single Source of Truth), comparar opciones y escenarios sin intermediarios, acceder a módulos interactivos que simulan costo, tiempo e impacto, facilitar auditorías y rondas de inversión, y visualizar el potencial técnico, económico y ambiental del sistema DEMS.'
     },
     {
       icon: Shield,
@@ -64,7 +64,7 @@ const CarouselSection = () => {
       icon: LayoutDashboard,
       color: 'from-teal-500 to-teal-600',
       title: '¿Qué encontrarás aquí?',
-      description: 'Este Dataroom reúne seis áreas clave: (1) Módulos Interactivos — simuladores y herramientas dinámicas, (2) Modelos de Negocio — estructuras de operación y escalamiento, (3) Documentación Técnica — planos, certificaciones y metodologías, (4) Arquitectura Modular — componentes y configuraciones adaptables, (5) Economía Circular — trazabilidad y reuso de materiales, (6) Alianzas y Expansión — colaboración estratégica entre empresas.'
+      description: 'Este Data Room reúne seis áreas clave: (1) Módulos Interactivos — simuladores y herramientas dinámicas, (2) Modelos de Negocio — estructuras de operación y escalamiento, (3) Documentación Técnica — planos, certificaciones y metodologías, (4) Arquitectura Modular — componentes y configuraciones adaptables, (5) Economía Circular — trazabilidad y reuso de materiales, (6) Alianzas y Expansión — colaboración estratégica entre empresas.'
     },
     {
       icon: Compass,
@@ -75,7 +75,7 @@ const CarouselSection = () => {
     {
       icon: Lock,
       color: 'from-orange-500 to-orange-600',
-      title: '¿Qué hace diferente a este Dataroom?',
+      title: '¿Qué hace diferente a este Data Room?',
       description: 'A diferencia de servicios comerciales de almacenamiento en la nube, nuestro Data Room es una red inteligente de conocimiento estructurado y orientado a las necesidades de una gran diversidad de usuarios. Quienes a través de la toma de decisiones informadas y conscientes, pueden encontrar con nuestro acompañamiento y respaldo valor económico, social y ambiental, bajo una visión integral y personalizada. El contenido general se actualiza de manera recurrente a través de procesos internos, así como de las mejores fuentes externas, garantizando transparencia y fiabilidad.'
     }
   ];
@@ -417,7 +417,7 @@ const Dataroom = () => {
           <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-200/50 bg-white/60">
             {!sidebarCollapsed ? (
               <div className="text-xs text-slate-400 text-center">
-                <p className="font-medium mb-1">Dataroom Seguro</p>
+                <p className="font-medium mb-1">Data Room Seguro</p>
                 <p>© 2025 <StyledText variant="default" className="text-xs inline" /></p>
               </div>
             ) : (
@@ -473,7 +473,7 @@ const Dataroom = () => {
                 {/* Mobile Sidebar Footer */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-200/50 bg-slate-50/50">
                   <div className="text-xs text-slate-400 text-center">
-                    <p className="font-medium mb-1">Dataroom Seguro</p>
+                    <p className="font-medium mb-1">Data Room Seguro</p>
                     <p>© 2025 <StyledText variant="default" className="text-xs inline" /></p>
                   </div>
                 </div>
@@ -523,7 +523,7 @@ const Dataroom = () => {
                       className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6"
                     >
                       <Shield className="w-4 h-4 text-blue-600" />
-                      <span className="text-sm font-medium text-blue-700">Dataroom Seguro</span>
+                      <span className="text-sm font-medium text-blue-700">Data Room Seguro</span>
                     </motion.div>
 
                     <motion.h1
@@ -575,7 +575,7 @@ const Dataroom = () => {
                       <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <Database className="w-7 h-7 text-white" />
                       </div>
-                      <h3 className="text-lg font-bold text-slate-800 mb-2">Qué es un Dataroom</h3>
+                      <h3 className="text-lg font-bold text-slate-800 mb-2">Qué es un Data Room</h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
                         Un espacio seguro que concentra de forma estructurada, inteligente e interactiva  información estratégica y sólidamente respaldada alrededor de proyectos y temas específicos.
                       </p>
@@ -671,7 +671,7 @@ const Dataroom = () => {
                 >
                   <div className="flex items-center gap-3 mb-6 mt-8">
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-                    <h2 className="text-lg font-semibold text-slate-700">Métricas del Dataroom</h2>
+                    <h2 className="text-lg font-semibold text-slate-700">Métricas del Data Room</h2>
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
                   </div>
 

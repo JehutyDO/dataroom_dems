@@ -55,7 +55,7 @@ const HomePage = () => {
           >
             <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold text-foreground">
-                <StyledText variant="gradient" /> DataRoom
+                <StyledText variant="gradient" /> Data Room
               </h1>
               <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-foreground/70 max-w-2xl mx-auto">
                 Explora módulos, circularidad, modelos de negocio y métricas ESG en tiempo real
@@ -78,7 +78,7 @@ const HomePage = () => {
                       Aviso de Seguridad y Confidencialidad
                     </h3>
                     <p className="text-xs sm:text-sm text-amber-800 leading-relaxed">
-                      Este DataRoom contiene <strong>información confidencial y datos ficticios</strong> con fines demostrativos. 
+                      Este Data Room contiene <strong>información confidencial y datos ficticios</strong> con fines demostrativos. 
                       El acceso está restringido y todo el contenido es <strong>propiedad intelectual protegida</strong>. 
                       Cualquier uso no autorizado, reproducción o distribución está <strong>estrictamente prohibido</strong>.
                     </p>
@@ -120,7 +120,7 @@ const HomePage = () => {
           >
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground mb-4">
-                Accede al <StyledText variant="gradient" className="text-2xl sm:text-3xl lg:text-4xl inline" /> Dataroom
+                Accede al <StyledText variant="gradient" className="text-2xl sm:text-3xl lg:text-4xl inline" /> Data Room
               </h2>
               <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto">
                 Sistema seguro con documentación completa, modelos de negocio y análisis detallados
@@ -241,7 +241,7 @@ const HomePage = () => {
                   </h3>
                   <div className="text-xs md:text-sm text-slate-700 leading-relaxed space-y-2">
                     <p>
-                      <strong>1. Propósito Demostrativo:</strong> Este DataRoom es una <strong>demo técnica</strong> creada exclusivamente con fines ilustrativos y educativos. 
+                      <strong>1. Propósito Demostrativo:</strong> Este Data Room es una <strong>demo técnica</strong> creada exclusivamente con fines ilustrativos y educativos. 
                       Todas las empresas mencionadas (<strong>DEMS, TechBuild, EcoPanel, Mexalit, Cempanel</strong>) son <strong>ficticias</strong> y cualquier similitud con entidades reales es mera coincidencia.
                     </p>
                     <p>
@@ -268,7 +268,7 @@ const HomePage = () => {
             {/* Footer Legal Text */}
             <div className="text-center space-y-2">
               <p className="text-xs text-slate-600">
-                © 2025 <StyledText variant="gradient" className="text-xs inline" /> DataRoom · Demo Técnica
+                © 2025 <StyledText variant="gradient" className="text-xs inline" /> Data Room · Demo Técnica
               </p>
               <p className="text-xs text-slate-500">
                 Al acceder a este sistema, aceptas los términos de confidencialidad y uso responsable de la información.

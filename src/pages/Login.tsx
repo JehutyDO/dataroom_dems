@@ -78,7 +78,7 @@ const Login = () => {
             <div className="flex items-center justify-center gap-2 mb-2">
               <StyledText variant="default" className="text-4xl" />
             </div>
-            <p className="text-sm text-slate-500 font-light tracking-wide">Secure Dataroom Access</p>
+            <p className="text-sm text-slate-500 font-light tracking-wide">Secure Data Room Access</p>
           </motion.div>
 
           {/* Card */}
@@ -157,7 +157,7 @@ const Login = () => {
                 type="submit"
                 className="w-full h-12 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-xl font-medium shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30"
               >
-                Ingresar al Dataroom
+                Ingresar al Data Room
               </Button>
             </form>
 

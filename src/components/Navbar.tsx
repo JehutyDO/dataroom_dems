@@ -39,7 +39,7 @@ const Navbar = () => {
           >
             <Database className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
             <span className="hidden xs:inline">
-              <StyledText /> DataRoom
+              <StyledText /> Data Room
             </span>
             <span className="inline xs:hidden">
               <StyledText />
